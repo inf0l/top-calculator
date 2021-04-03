@@ -1,0 +1,56 @@
+@media (min-width: 200px) {
+		.display { grid-area: display; }
+		.numPad { grid-area: numPad }
+		.operators { grid-area: operators }
+		#container {
+				max-width: 1000px;
+				max-height: 1200px;
+				width: 100vmin;
+				height: 100vmin;
+				display: grid;
+				background-color: #aaa;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(6, 1fr);
+				grid-template-areas:
+						"display display display display"
+						"numPad numPad numPad operators"
+						"numPad numPad numPad operators"
+						"numPad numPad numPad operators"
+						"numPad numPad numPad operators"
+						". . equals equals"
+		}
+
+		#display {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				padding-right: 1em;
+				height: 3em;
+				max-height: 250px;
+				background-color: #ddd;
+				font-family: 'DM Mono', monospace;
+				font-size: min(8vw, 80px);
+		}
+
+		#numPad {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				height: 100%;
+				margin: 0;
+
+		}
+
+		#operators {
+				display: grid;
+				grid-template-rows: repeat(4, 1fr);
+				height: 100%;
+				margin: 0;
+
+		}
+
+		.numKey {
+				font-family: 'DM Mono', monospace;
+				font-size: min(5vw, 50px);
+		}
+}
+
